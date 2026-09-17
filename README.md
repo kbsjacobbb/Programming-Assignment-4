@@ -69,6 +69,8 @@ This code then further filters the list by identifying only people who achieved 
 
 ## C. CATEGORY-AVERAGE VISUALIZATION
 
+### Code:
+
     average_track = df.groupby("Track")["Average"].mean()
     average_track
 
@@ -78,7 +80,37 @@ This code then further filters the list by identifying only people who achieved 
     average_hometown = df.groupby("Hometown")["Average"].mean()
     average_hometown
 
-These line of codes
+These lines of code display the average scores of each of the three categories: Track, Gender, and Hometown.
+
+    average_track.plot(kind="bar", figsize=[10, 6])
+
+    plt.title("Mean Average by Track")
+    plt.xlabel("Track")
+    plt.ylabel("Mean Average")
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+    plt.show()
+--------------------------------------------------------------
+    average_gender.plot(kind="bar", figsize=[10, 6])
+
+    plt.title("Mean Average by Gender")
+    plt.xlabel("Gender")
+    plt.ylabel("Mean Average")
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+    plt.show()
+--------------------------------------------------------------
+    average_hometown.plot(kind="bar", figsize=[10, 6])
+
+    plt.title("Mean Average by Hometown")
+    plt.xlabel("Hometown")
+    plt.ylabel("Mean Average")
+    plt.xticks(rotation=0)
+    plt.tight_layout()
+    plt.show()
+
+These lines of code display the bar graphs of the results from the first set of lines of code.
+
 
 
 
