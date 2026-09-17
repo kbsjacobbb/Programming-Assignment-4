@@ -90,7 +90,7 @@ These lines of code display the average scores of each of the three categories: 
     plt.xticks(rotation=0)
     plt.tight_layout()
     plt.show()
---------------------------------------------------------------
+
     average_gender.plot(kind="bar", figsize=[10, 6])
 
     plt.title("Mean Average by Gender")
@@ -99,7 +99,7 @@ These lines of code display the average scores of each of the three categories: 
     plt.xticks(rotation=0)
     plt.tight_layout()
     plt.show()
---------------------------------------------------------------
+
     average_hometown.plot(kind="bar", figsize=[10, 6])
 
     plt.title("Mean Average by Hometown")
@@ -110,6 +110,18 @@ These lines of code display the average scores of each of the three categories: 
     plt.show()
 
 These lines of code display the bar graphs of the results from the first set of lines of code.
+
+    highest_track = average_track.idxmax()
+    highest_gender = average_gender.idxmax()
+    highest_hometown = average_hometown.idxmax()
+
+These lines of code identify the highest average or "max" of the scores for each category.
+
+    print("Category with Highest Sample Mean for Track:", highest_track)
+    print("Category with Highest Sample Mean for Gender:", highest_gender)
+    print("Category with Highest Sample Mean for Hometown:", highest_hometown)
+
+These lines of code display the highest average score for each category.
 
 
 
